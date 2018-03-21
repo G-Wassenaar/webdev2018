@@ -1,4 +1,7 @@
 <?php
+
+include 'robot.php';
+
 /**
  * Created by PhpStorm.
  * User: geertvangent
@@ -19,7 +22,15 @@
      }
 
      static function showMain(){
-         echo "Main";
+         echo "Main<br>";
+         $superRobot= new Robot(5);
+         echo $superRobot->maakZichtbaar();
+         echo '<br>';
+         $ultraRobot= new Robot(10);
+         echo $ultraRobot->maakZichtbaar();
+
+         $ultraRobot->fight($superRobot);
+
      }
 
      static function showAside(){
